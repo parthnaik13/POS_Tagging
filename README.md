@@ -6,7 +6,8 @@ Her position covers a number of daily tasks common to any social director.
 DET NOUN VERB DET NOUN ADP ADJ NOUN ADJ ADP DET ADJ NOUN
 Where DET stands for a determiner, ADP is an adposition, ADJ is an adjective, and ADV is an adverb.1 Labeling parts of speech thus involves an understanding of the intended meaning of the words in the sentence, as well as the relationships between the words.
 
-<b>To use the 3 models for POS tagging and seeing the results, run using command - python ./label.py bc.train bc.test.tiny<\b><br>
+To use the 3 models for POS tagging and seeing the results, run using command :
+<b>python ./label.py bc.train bc.test.tiny</b><br>
 
 Training phase : 
 1.	During the training phase using the tagged words in the training data we calculate the prior, emission and transition probabilities.
@@ -68,8 +69,36 @@ Laplace smoothing:
 While calculating likelihood for a word i.e P(Word|City) for a word that has not yet occured in the city's tweets the P(Word|City) = 0 seems logical,
 but we need to assign some value however small to the probability such that it is not 0 as there is always a very remote possibilty that the word might
 occur in the city's tweets.
-Also if we assign 0 the probabilty the whole product will be 0 which is not at all desirable.
+Also if we assign 0 the probabilty the whole product will be 0 which is not at all desirable.<br><br>
 Results:
+<table>
+	<tr>
+		<th>Model</th>
+		<th>Words correct</th>
+		<th>Sentences correct</th>
+	</tr>
+	<tr>
+		<td>Ground truth</td>
+		<td>100.00%</td>
+		<td>100.00%</td>
+	</tr>
+	<tr>
+		<td>Simple</td>
+		<td>93.71%</td>
+		<td>42.35%</td>
+	</tr>
+	<tr>
+		<td>HMM</td>
+		<td>95.03%</td>
+		<td>50.20%</td>
+	</tr>
+	<tr>
+		<td>Complex</td>
+		<td>93.76%</td>
+		<td>44.71%</td>
+	</tr>
+</table>
+<br>
                 Words correct:     Sentences correct:
    0. Ground truth:      100.00%              100.00%
          1. Simple:       93.71%               42.35%
