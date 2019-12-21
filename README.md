@@ -98,9 +98,3 @@ Results:
 		<td>44.71%</td>
 	</tr>
 </table>
-<br>
-                Words correct:     Sentences correct:
-   0. Ground truth:      100.00%              100.00%
-         1. Simple:       93.71%               42.35%
-            2. HMM:       95.03%               50.20%
-        3. Complex:       93.76%               44.71%
